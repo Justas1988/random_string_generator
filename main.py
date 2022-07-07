@@ -2,21 +2,13 @@ from random import randint
 from time import sleep
 
 def rand():
-	number = randint(0.6)
+	number = randint(0,6)
 	return number
 
 def random_string_generator():
 
 	letters_list = ['a','b','c','d','e','f','g']
-	'''
-	n1 = randint(0,6)
-	n2 = randint(0,6)
-	n3 = randint(0,6)
-	n4 = randint(0,6)
-	n5 = randint(0,6)
-	n6 = randint(0,6)
-	n7 = randint(0,6) 
-	'''
+
 	key_tuple = (letters_list[rand()],letters_list[rand()],letters_list[rand()],letters_list[rand()],letters_list[rand()],letters_list[rand()],letters_list[rand()])
 	return key_tuple
 
