@@ -9,10 +9,8 @@ def random_string_generator():
 
 	letters_list = ['a','b','c','d','e','f','g']
 
-	key_tuple = (letters_list[rand()],letters_list[rand()],letters_list[rand()],letters_list[rand()],letters_list[rand()],letters_list[rand()],letters_list[rand()])
+	key_tuple = (letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()])
 	return key_tuple
-
-	print(f'unique_key_string: {key[0]}{key[1]}{key[2]}-{key[3]}{key[4]}{key[5]}-{key[6]}')
 
 
 def random_string_printer(i):
