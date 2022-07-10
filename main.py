@@ -14,10 +14,15 @@ def random_string_generator():
 
 
 def random_string_printer(i):
+	my_file = open('strings.txt','w+')
 	while i != 0:
 		key = random_string_generator()
-		print(f'unique_key_string: {key[0]}{key[1]}{key[2]}-{key[3]}{key[4]}{key[5]}-{key[6]}')
+		unique_key_string = [key[0],key[1],key[2],'-',key[3],key[4],key[5],'-',key[6]]
+		joined_key_string = "".join(unique_key_string)
+		print(f'unique_key_string: {joined_key_string}')
+		my_file.write(joined_key_string + '\n')
 		i = i-1
+	my_file.close()
 
 
 def input_trigger():
