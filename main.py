@@ -12,8 +12,20 @@ def random_string_generator():
 	key_tuple = (letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()])
 	return key_tuple
 
+def duplicate_checker(starting_index):
+	print("Will now check for duplicates")
+	sleep(1)
+	lines_set = set()	
+	for line in open('strings.txt'):
+		lines_set.add(line)
+	print("Set length: " + str(len(lines_set)))
+	if len(lines_set) < starting_index:
+		print("Error Duplicates found")
+	else:
+		print("Good! Found no duplicates!")
 
 def random_string_printer(i):
+	starting_index = i
 	my_file = open('strings.txt','w+')
 	while i != 0:
 		key = random_string_generator()
@@ -23,6 +35,7 @@ def random_string_printer(i):
 		my_file.write(joined_key_string + '\n')
 		i = i-1
 	my_file.close()
+	duplicate_checker(starting_index)
 
 
 def input_trigger():
