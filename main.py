@@ -2,14 +2,14 @@ from random import randint
 from time import sleep
 
 def rand():
-	number = randint(0,6)
+	number = randint(0,9)
 	return number
 
 def random_string_generator():
 
-	letters_list = ['a','b','c','d','e','f','g']
+	letters_list = ['a','b','c','d','e','f','g','h','i','j']
 
-	key_tuple = (letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()])
+	key_tuple = (letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()])
 	return key_tuple
 
 def duplicate_checker(starting_index):
@@ -29,9 +29,9 @@ def random_string_printer(i):
 	my_file = open('strings.txt','w+')
 	while i != 0:
 		key = random_string_generator()
-		unique_key_string = [key[0],key[1],key[2],'-',key[3],key[4],key[5],'-',key[6]]
+		unique_key_string = [key[0],key[1],key[2],'-',key[3],key[4],key[5],'-',key[6],key[7],key[8],'-',key[9]]
 		joined_key_string = "".join(unique_key_string)
-		print(f'unique_key_string: {joined_key_string}')
+		print(f'unique_key_string {starting_index - i + 1}: {joined_key_string}')
 		my_file.write(joined_key_string + '\n')
 		i = i-1
 	my_file.close()
