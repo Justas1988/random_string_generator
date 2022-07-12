@@ -29,7 +29,7 @@ def random_string_printer(i):
 		key = random_string_generator()
 		joined_key_string = "".join([key[0],key[1],key[2],'-',key[3],key[4],key[5],'-',key[6],key[7],key[8],'-',key[9]])		
 		print(f'unique_key_string {starting_index - i + 1}: {joined_key_string.upper()}')
-		my_file.write(joined_key_string + '\n')
+		my_file.write(joined_key_string.upper() + '\n')
 		i -= 1
 	my_file.close()
 	duplicate_checker(starting_index)
