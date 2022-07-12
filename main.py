@@ -2,11 +2,11 @@ from random import randint
 from time import sleep
 
 def rand():
-	number = randint(0,9)
+	number = randint(0,25)
 	return number
 
 def random_string_generator():
-	letters_list = ['a','b','c','d','e','f','g','h','i','j']
+	letters_list = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 	key_tuple = (letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()], letters_list[rand()])
 	return key_tuple
 
@@ -28,7 +28,7 @@ def random_string_printer(i):
 	while i != 0:
 		key = random_string_generator()
 		joined_key_string = "".join([key[0],key[1],key[2],'-',key[3],key[4],key[5],'-',key[6],key[7],key[8],'-',key[9]])		
-		print(f'unique_key_string {starting_index - i + 1}: {joined_key_string}')
+		print(f'unique_key_string {starting_index - i + 1}: {joined_key_string.upper()}')
 		my_file.write(joined_key_string + '\n')
 		i -= 1
 	my_file.close()
